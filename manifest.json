@@ -31,7 +31,7 @@
   "host_permissions": ["<all_urls>"],
   "web_accessible_resources": [
     {
-      "resources": ["icons/*"],
+      "resources": ["icons/*", "libs/html2canvas.min.js"],
       "matches": ["<all_urls>"]
     }
   ],
