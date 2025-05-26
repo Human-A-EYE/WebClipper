@@ -1,3 +1,5 @@
+console.log("SnapClip content script loaded");
+console.log("html2canvas:", typeof html2canvas);
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-button').addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
