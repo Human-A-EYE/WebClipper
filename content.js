@@ -57,7 +57,14 @@ function showActionButtons() {
 
   const saveBtn = document.createElement('button');
   saveBtn.innerText = 'Save';
-  saveBtn.onclick = () => alert('Save clicked!');
+  saveBtn.onclick = () => {
+  html2canvas(selectionBox).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `snapclip-${Date.now()}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+};
 
   const copyBtn = document.createElement('button');
   copyBtn.innerText = 'Copy';
